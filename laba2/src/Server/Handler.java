@@ -42,7 +42,7 @@ class Handler implements Runnable {
         }
     }
 
-    private static int countMultiplesOfThree(int[] arr) {
+    private static int countMultiplesOfThree(int[] arr) { // подсчёт количества чисел в массиве, кратных 3
         int count = 0;
         for(int i = 0; i < arr.length; i++) {
             if(arr[i] % 3 == 0) {
@@ -52,7 +52,7 @@ class Handler implements Runnable {
         return count;
     }
 
-    private static int findMax(int[] arr) {
+    private static int findMax(int[] arr) { // поиск максимального элемента в массиве
         int max = arr[0];
         for(int i = 1; i < arr.length; i++) {
             if(max < arr[i]) {
@@ -62,7 +62,7 @@ class Handler implements Runnable {
         return max;
     }
 
-    private static int findMin(int[] arr) {
+    private static int findMin(int[] arr) { // поиск минимального элемента в массиве
         int min = arr[0];
         for(int i = 1; i < arr.length; i++) {
             if(min > arr[i]) {
@@ -72,7 +72,7 @@ class Handler implements Runnable {
         return min;
     }
 
-    private static void writeToFile(String client, int[] req, int[] res) {
+    private static void writeToFile(String client, int[] req, int[] res) { // запись в файл
         try (BufferedWriter writer = new BufferedWriter(new FileWriter("D:/Учёба своё/Marina/TP/laba2/src/file.txt", true))) {
             writer.write("Клиент: " + client + "\n" + "Поступивший массив: " + Arrays.toString(res) + "\n" +
                     "Количество чисел, кратных трём: " + res[0] + "\n" +
